@@ -363,33 +363,127 @@
       line-height: 1.36;
     }
 
+    /* Slide 10: Gọn gàng để không chạm HUD */
     #slide-10 .comic-body > div {
-      gap: 12px;
+      gap: 10px;
     }
     #slide-10 .comic-card {
-      padding: 10px 16px;
+      padding: 8px 16px;
     }
     #slide-10 .comic-card h3 {
-      font-size: 30px;
-      margin: 4px 0;
+      font-size: 28px;
+      margin: 2px 0;
     }
     #slide-10 .comic-badge-star {
       font-size: 14px;
       padding: 2px 10px;
     }
     #slide-10 .comic-bullets {
-      gap: 6px;
-      margin-top: 6px;
+      gap: 5px;
+      margin-top: 5px;
     }
     #slide-10 .comic-bullets li {
-      font-size: 28px;
-      line-height: 1.32;
+      font-size: 26px;
+      line-height: 1.3;
     }
     #slide-10 .comic-bullets li svg,
     #slide-10 .comic-bullets li i {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       margin-top: 4px;
+    }
+
+    /* Slide 14: Phóng to chữ lấp đầy khoảng trống */
+    #slide-14 .comic-card {
+      padding: 22px 24px;
+    }
+    #slide-14 .comic-card h4 {
+      font-size: 34px;
+      margin: 8px 0;
+    }
+    #slide-14 .comic-badge-star {
+      font-size: 17px;
+      padding: 4px 14px;
+    }
+    #slide-14 .comic-bullets {
+      gap: 14px;
+      margin-top: 14px;
+    }
+    #slide-14 .comic-bullets li {
+      font-size: 32px;
+      line-height: 1.4;
+    }
+
+    /* Slide 15: Co gọn ảnh và mô tả để không bị HUD che chữ */
+    #slide-15 .comic-card {
+      padding: 12px 18px;
+    }
+    #slide-15 .comic-card h3 {
+      font-size: 36px;
+      margin: 6px 0;
+    }
+    #slide-15 .comic-card p {
+      font-size: 28px;
+      line-height: 1.34;
+    }
+    #slide-15 .comic-card div[style*="height: 230px"],
+    #slide-15 .comic-card div[style*="height: 170px"] {
+      height: 170px !important;
+    }
+    #slide-15 .comic-bullets li {
+      font-size: 29.5px;
+      line-height: 1.34;
+    }
+
+    /* Slide 16: Phóng to chữ 4 nguyên tắc lấp đầy khoảng trống */
+    #slide-16 .comic-card {
+      padding: 20px 22px;
+    }
+    #slide-16 .comic-card h3 {
+      font-size: 34px;
+      margin: 8px 0;
+    }
+    #slide-16 .comic-badge-star {
+      font-size: 16px;
+      padding: 4px 12px;
+    }
+    #slide-16 .comic-bullets {
+      gap: 14px;
+      margin-top: 14px;
+    }
+    #slide-16 .comic-bullets li {
+      font-size: 32px;
+      line-height: 1.38;
+    }
+
+    /* Slide 18: Co gọn khung dashed để không bị HUD che */
+    #slide-18 .comic-card {
+      padding: 12px 18px;
+    }
+    #slide-18 .comic-card h3 {
+      font-size: 35px;
+      margin: 6px 0;
+    }
+    #slide-18 .comic-card > div > p {
+      font-size: 28px;
+      line-height: 1.32;
+    }
+    #slide-18 .comic-card div[style*="dashed"] {
+      padding: 10px 14px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    #slide-18 .comic-card div[style*="dashed"] h4 {
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+    #slide-18 .comic-card div[style*="dashed"] p {
+      font-size: 27px;
+      line-height: 1.32;
+    }
+    #slide-18 .comic-bullets li {
+      font-size: 28px;
+      line-height: 1.32;
     }
 
     /* SOUND EFFECT BURST TAG */
@@ -1211,11 +1305,11 @@
             <p class="comic-subtitle">Tiêu diệt các phương tiện bay xâm phạm từ xa, quản lý và canh giữ tuyệt đối an toàn vùng trời Tổ quốc</p>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; flex: 1;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; flex: 1;">
             
-            <div class="comic-card orange-shadow" style="border-top: 6px solid #DC2626;">
-              <span class="comic-badge-star" style="background: #DC2626;">LỰC LƯỢNG 1</span>
-              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 6px 0;">KHÔNG QUÂN TIÊM KÍCH SU-30MK2</h3>
+            <div class="comic-card orange-shadow" style="border-top: 6px solid #DC2626; padding: 8px 16px;">
+              <span class="comic-badge-star" style="background: #DC2626; font-size: 14px; padding: 2px 10px;">LỰC LƯỢNG 1</span>
+              <h3 style="font-family: var(--font-comic); font-size: 28px; color: var(--color-secondary); margin: 2px 0;">KHÔNG QUÂN TIÊM KÍCH SU-30MK2</h3>
               <ul class="comic-bullets">
                 <li><i data-lucide="check"></i><span>Tốc độ tối đa Mach 2.0; bán kính chiến đấu vượt trội 3.000 km</span></li>
                 <li><i data-lucide="check"></i><span>Trang bị tên lửa diệt hạm Kh-31 và bom thông minh có dẫn đường</span></li>
@@ -1223,9 +1317,9 @@
               </ul>
             </div>
 
-            <div class="comic-card" style="border-top: 6px solid #0284C7;">
-              <span class="comic-badge-star" style="background: #0284C7;">LỰC LƯỢNG 2</span>
-              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 6px 0;">TÊN LỬA PHÒNG KHÔNG S-300PMU1</h3>
+            <div class="comic-card" style="border-top: 6px solid #0284C7; padding: 8px 16px;">
+              <span class="comic-badge-star" style="background: #0284C7; font-size: 14px; padding: 2px 10px;">LỰC LƯỢNG 2</span>
+              <h3 style="font-family: var(--font-comic); font-size: 28px; color: var(--color-secondary); margin: 2px 0;">TÊN LỬA PHÒNG KHÔNG S-300PMU1</h3>
               <ul class="comic-bullets">
                 <li><i data-lucide="check"></i><span>Lá chắn phòng không chiến lược tầm xa 150 km, bám bắt đa mục tiêu</span></li>
                 <li><i data-lucide="check"></i><span>Tổ hợp tên lửa tầm trung cơ động SPYDER phản ứng tức thì</span></li>
@@ -1233,9 +1327,9 @@
               </ul>
             </div>
 
-            <div class="comic-card" style="border-top: 6px solid #FF7A00;">
-              <span class="comic-badge-star" style="background: #FF7A00;">LỰC LƯỢNG 3</span>
-              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 6px 0;">PHÁO CAO XẠ TỰ ĐỘNG ĐIỀU KHIỂN</h3>
+            <div class="comic-card" style="border-top: 6px solid #FF7A00; padding: 8px 16px;">
+              <span class="comic-badge-star" style="background: #FF7A00; font-size: 14px; padding: 2px 10px;">LỰC LƯỢNG 3</span>
+              <h3 style="font-family: var(--font-comic); font-size: 28px; color: var(--color-secondary); margin: 2px 0;">PHÁO CAO XẠ TỰ ĐỘNG ĐIỀU KHIỂN</h3>
               <ul class="comic-bullets">
                 <li><i data-lucide="check"></i><span>Lưới lửa tầm thấp bảo vệ đội hình hành quân và sân bay căn cứ</span></li>
                 <li><i data-lucide="check"></i><span>Tích hợp radar quang điện tử bắn chặn tên lửa hành trình và UAV</span></li>
@@ -1243,9 +1337,9 @@
               </ul>
             </div>
 
-            <div class="comic-card" style="border-top: 6px solid #10B981;">
-              <span class="comic-badge-star" style="background: #10B981;">LỰC LƯỢNG 4</span>
-              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 6px 0;">BINH CHỦNG RA-ĐA CẢNH GIỚI 3D</h3>
+            <div class="comic-card" style="border-top: 6px solid #10B981; padding: 8px 16px;">
+              <span class="comic-badge-star" style="background: #10B981; font-size: 14px; padding: 2px 10px;">LỰC LƯỢNG 4</span>
+              <h3 style="font-family: var(--font-comic); font-size: 28px; color: var(--color-secondary); margin: 2px 0;">BINH CHỦNG RA-ĐA CẢNH GIỚI 3D</h3>
               <ul class="comic-bullets">
                 <li><i data-lucide="check"></i><span>Mắt thần canh trời phát hiện từ sớm, từ xa các mục tiêu tàng hình</span></li>
                 <li><i data-lucide="check"></i><span>Bán kính quét hàng trăm km, truyền dữ liệu mục tiêu tức thời về sở chỉ huy</span></li>
@@ -1492,19 +1586,19 @@
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center;">
-              <div class="comic-card orange-shadow" style="border-left: 8px solid #0284C7;">
-                <span class="comic-badge-star" style="background: #0284C7;">BẢO VỆ DỮ LIỆU ĐẦU NÃO</span>
-                <h4 style="font-size: 29px; font-weight: 800; color: var(--color-secondary); margin: 6px 0;">Phòng Thủ Mạng Quân Sự</h4>
-                <ul class="comic-bullets">
+              <div class="comic-card orange-shadow" style="border-left: 8px solid #0284C7; padding: 22px 24px;">
+                <span class="comic-badge-star" style="background: #0284C7; font-size: 17px; padding: 4px 14px;">BẢO VỆ DỮ LIỆU ĐẦU NÃO</span>
+                <h4 style="font-size: 34px; font-weight: 800; color: var(--color-secondary); margin: 8px 0;">Phòng Thủ Mạng Quân Sự</h4>
+                <ul class="comic-bullets" style="gap: 14px; margin-top: 14px;">
                   <li><i data-lucide="check"></i><span>Mã hóa thông tin cơ mật, bảo vệ sở chỉ huy trước gián điệp mạng</span></li>
                   <li><i data-lucide="check"></i><span>Ngăn chặn mã độc, phần mềm gián điệp đánh cắp bí mật quốc phòng</span></li>
                 </ul>
               </div>
 
-              <div class="comic-card" style="border-left: 8px solid #FF7A00;">
-                <span class="comic-badge-star" style="background: #FF7A00;">CHẾ ÁP ĐIỆN TỬ</span>
-                <h4 style="font-size: 29px; font-weight: 800; color: var(--color-secondary); margin: 6px 0;">Đấu Tranh Không Gian Số</h4>
-                <ul class="comic-bullets">
+              <div class="comic-card" style="border-left: 8px solid #FF7A00; padding: 22px 24px;">
+                <span class="comic-badge-star" style="background: #FF7A00; font-size: 17px; padding: 4px 14px;">CHẾ ÁP ĐIỆN TỬ</span>
+                <h4 style="font-size: 34px; font-weight: 800; color: var(--color-secondary); margin: 8px 0;">Đấu Tranh Không Gian Số</h4>
+                <ul class="comic-bullets" style="gap: 14px; margin-top: 14px;">
                   <li><i data-lucide="check"></i><span>Chế áp điện tử, vô hiệu hóa kênh thông tin định vị của đối phương</span></li>
                   <li><i data-lucide="check"></i><span>Đấu tranh phản bác quan điểm sai trái, bảo vệ trận địa tư tưởng</span></li>
                 </ul>
@@ -1545,14 +1639,14 @@
 
           <div style="display: grid; grid-template-columns: 1fr 100px 1fr; gap: 18px; align-items: center; flex: 1;">
             
-            <div class="comic-card" style="border: 4px solid #10B981; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="comic-card" style="border: 4px solid #10B981; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 12px 18px;">
               <div>
                 <span class="comic-badge-star" style="background: #10B981;">TL: 03/03/1959</span>
-                <h3 style="font-family: var(--font-comic); font-size: 39px; color: #047857; margin: 8px 0;">BỘ ĐỘI BIÊN PHÒNG</h3>
-                <p style="font-size: 33px; color: #475569; font-weight: 600;">Chuyên trách quản lý, bảo vệ đường biên giới đất liền, mốc giới và cửa khẩu quốc tế.</p>
+                <h3 style="font-family: var(--font-comic); font-size: 36px; color: #047857; margin: 6px 0;">BỘ ĐỘI BIÊN PHÒNG</h3>
+                <p style="font-size: 28px; color: #475569; font-weight: 600; line-height: 1.34;">Chuyên trách quản lý, bảo vệ đường biên giới đất liền, mốc giới và cửa khẩu quốc tế.</p>
               </div>
 
-              <div style="border-radius: 8px; overflow: hidden; height: 230px; border: 3px solid #00224F;">
+              <div style="border-radius: 8px; overflow: hidden; height: 170px; border: 3px solid #00224F; margin: 8px 0;">
                 <img src="assets/vn-flag-tower.jpg" alt="Cột cờ Biên cương" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
 
@@ -1569,14 +1663,14 @@
               <span style="font-family: var(--font-comic); font-size: 27px; color: var(--color-primary); margin-top: 8px; text-transform: uppercase;">HIỆP ĐỒNG</span>
             </div>
 
-            <div class="comic-card orange-shadow" style="border: 4px solid #003882; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="comic-card orange-shadow" style="border: 4px solid #003882; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 12px 18px;">
               <div>
                 <span class="comic-badge-star" style="background: #003882;">TL: 28/08/1998</span>
-                <h3 style="font-family: var(--font-comic); font-size: 39px; color: var(--color-secondary); margin: 8px 0;">CẢNH SÁT BIỂN VIỆT NAM</h3>
-                <p style="font-size: 33px; color: #475569; font-weight: 600;">Lực lượng vũ trang nhân dân chuyên trách thực thi pháp luật trên 4 vùng biển Tổ quốc.</p>
+                <h3 style="font-family: var(--font-comic); font-size: 36px; color: var(--color-secondary); margin: 6px 0;">CẢNH SÁT BIỂN VIỆT NAM</h3>
+                <p style="font-size: 28px; color: #475569; font-weight: 600; line-height: 1.34;">Lực lượng vũ trang nhân dân chuyên trách thực thi pháp luật trên 4 vùng biển Tổ quốc.</p>
               </div>
 
-              <div style="border-radius: 8px; overflow: hidden; height: 230px; border: 3px solid #00224F;">
+              <div style="border-radius: 8px; overflow: hidden; height: 170px; border: 3px solid #00224F; margin: 8px 0;">
                 <img src="assets/vn-canh-sat-bien-8002.jpg" alt="Tuần tra Cảnh sát biển" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
 
@@ -1619,39 +1713,39 @@
             <p class="comic-subtitle">Phối hợp chặt chẽ giữa các quân binh chủng biến ý định chiến thuật thành chiến thắng giòn giã</p>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; flex: 1;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; flex: 1;">
             
-            <div class="comic-card" style="border-top: 6px solid #DC2626;">
-              <span class="comic-badge-star" style="background: #DC2626;">NGUYÊN TẮC 1</span>
-              <h3 style="font-family: var(--font-comic); font-size: 32px; color: var(--color-secondary); margin: 6px 0;">1. QUÁN TRIỆT Ý ĐỊNH NGƯỜI CHỈ HUY</h3>
-              <ul class="comic-bullets">
+            <div class="comic-card" style="border-top: 6px solid #DC2626; padding: 20px 22px;">
+              <span class="comic-badge-star" style="background: #DC2626; font-size: 16px; padding: 4px 12px;">NGUYÊN TẮC 1</span>
+              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 8px 0;">1. QUÁN TRIỆT Ý ĐỊNH NGƯỜI CHỈ HUY</h3>
+              <ul class="comic-bullets" style="gap: 14px; margin-top: 14px;">
                 <li><i data-lucide="check"></i><span>Mọi quân binh chủng phải nắm vững hướng tiến công chủ yếu</span></li>
                 <li><i data-lucide="check"></i><span>Tuyệt đối phục vụ cho mục tiêu chiến dịch chung, không cát cứ riêng rẽ</span></li>
               </ul>
             </div>
 
-            <div class="comic-card orange-shadow" style="border-top: 6px solid #0284C7;">
-              <span class="comic-badge-star" style="background: #0284C7;">NGUYÊN TẮC 2</span>
-              <h3 style="font-family: var(--font-comic); font-size: 32px; color: var(--color-secondary); margin: 6px 0;">2. TẬP TRUNG THỐNG NHẤT CHỈ HUY</h3>
-              <ul class="comic-bullets">
+            <div class="comic-card orange-shadow" style="border-top: 6px solid #0284C7; padding: 20px 22px;">
+              <span class="comic-badge-star" style="background: #0284C7; font-size: 16px; padding: 4px 12px;">NGUYÊN TẮC 2</span>
+              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 8px 0;">2. TẬP TRUNG THỐNG NHẤT CHỈ HUY</h3>
+              <ul class="comic-bullets" style="gap: 14px; margin-top: 14px;">
                 <li><i data-lucide="check"></i><span>Chỉ một người chỉ huy cao nhất điều hành kế hoạch hiệp đồng</span></li>
                 <li><i data-lucide="check"></i><span>Khớp lệnh thống nhất từng phút, tránh phân tán giẫm chân nhau</span></li>
               </ul>
             </div>
 
-            <div class="comic-card orange-shadow" style="border-top: 6px solid #10B981;">
-              <span class="comic-badge-star" style="background: #10B981;">NGUYÊN TẮC 3</span>
-              <h3 style="font-family: var(--font-comic); font-size: 32px; color: var(--color-secondary); margin: 6px 0;">3. TƯƠNG TRỢ & CHI VIỆN LẪN NHAU</h3>
-              <ul class="comic-bullets">
+            <div class="comic-card orange-shadow" style="border-top: 6px solid #10B981; padding: 20px 22px;">
+              <span class="comic-badge-star" style="background: #10B981; font-size: 16px; padding: 4px 12px;">NGUYÊN TẮC 3</span>
+              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 8px 0;">3. TƯƠNG TRỢ & CHI VIỆN LẪN NHAU</h3>
+              <ul class="comic-bullets" style="gap: 14px; margin-top: 14px;">
                 <li><i data-lucide="check"></i><span>Đơn vị thuận lợi chủ động chi viện cho cánh quân gặp khó khăn</span></li>
                 <li><i data-lucide="check"></i><span>Pháo binh che chắn bộ binh, phòng không bảo vệ đội hình xe tăng</span></li>
               </ul>
             </div>
 
-            <div class="comic-card" style="border-top: 6px solid #FF7A00;">
-              <span class="comic-badge-star" style="background: #FF7A00;">NGUYÊN TẮC 4</span>
-              <h3 style="font-family: var(--font-comic); font-size: 32px; color: var(--color-secondary); margin: 6px 0;">4. KẾ HOẠCH TỈ MỈ, DỰ KIẾN TÌNH HUỐNG</h3>
-              <ul class="comic-bullets">
+            <div class="comic-card" style="border-top: 6px solid #FF7A00; padding: 20px 22px;">
+              <span class="comic-badge-star" style="background: #FF7A00; font-size: 16px; padding: 4px 12px;">NGUYÊN TẮC 4</span>
+              <h3 style="font-family: var(--font-comic); font-size: 34px; color: var(--color-secondary); margin: 8px 0;">4. KẾ HOẠCH TỈ MỈ, DỰ KIẾN TÌNH HUỐNG</h3>
+              <ul class="comic-bullets" style="gap: 14px; margin-top: 14px;">
                 <li><i data-lucide="check"></i><span>Quy định ranh giới hỏa lực chuẩn xác tránh bắn nhầm quân mình</span></li>
                 <li><i data-lucide="check"></i><span>Sẵn sàng phương án dự phòng khi mất thông tin liên lạc</span></li>
               </ul>
@@ -1760,16 +1854,16 @@
 
           <div style="display: grid; grid-template-columns: 1fr 100px 1fr; gap: 18px; align-items: center; flex: 1;">
             
-            <div class="comic-card" style="border: 4px solid #DC2626; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="comic-card" style="border: 4px solid #DC2626; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 12px 18px;">
               <div>
                 <span class="comic-badge-star" style="background: #DC2626;">TÌNH HUỐNG 1</span>
-                <h3 style="font-family: var(--font-comic); font-size: 37px; color: #DC2626; margin: 8px 0;">MẤT THÔNG TIN LIÊN LẠC</h3>
-                <p style="font-size: 33px; color: #475569; font-weight: 600;">Khi đối phương kích hoạt bão xung điện từ gây nhiễu trắng sóng vô tuyến.</p>
+                <h3 style="font-family: var(--font-comic); font-size: 35px; color: #DC2626; margin: 6px 0;">MẤT THÔNG TIN LIÊN LẠC</h3>
+                <p style="font-size: 28px; color: #475569; font-weight: 600; line-height: 1.32;">Khi đối phương kích hoạt bão xung điện từ gây nhiễu trắng sóng vô tuyến.</p>
               </div>
 
-              <div style="background: rgba(220, 38, 38, 0.08); border: 2px dashed #DC2626; border-radius: 8px; padding: 14px;">
-                <h4 style="font-family: var(--font-comic); font-size: 29px; color: #DC2626; margin-bottom: 6px;">BIỆN PHÁP KHẮC PHỤC:</h4>
-                <p style="font-size: 32px; color: #1E293B; font-weight: 600;">Lập tức chuyển sang cáp quang dự phòng độc lập, cờ hiệu, pháo sáng và giao liên cơ động.</p>
+              <div style="background: rgba(220, 38, 38, 0.08); border: 2px dashed #DC2626; border-radius: 8px; padding: 10px 14px; margin: 8px 0;">
+                <h4 style="font-family: var(--font-comic); font-size: 26px; color: #DC2626; margin-bottom: 4px;">BIỆN PHÁP KHẮC PHỤC:</h4>
+                <p style="font-size: 27px; color: #1E293B; font-weight: 600; line-height: 1.32;">Lập tức chuyển sang cáp quang dự phòng độc lập, cờ hiệu, pháo sáng và giao liên cơ động.</p>
               </div>
 
               <ul class="comic-bullets">
@@ -1785,16 +1879,16 @@
               <span style="font-family: var(--font-comic); font-size: 27px; color: var(--color-primary); margin-top: 8px; text-transform: uppercase;">DỰ PHÒNG</span>
             </div>
 
-            <div class="comic-card orange-shadow" style="border: 4px solid #0284C7; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="comic-card orange-shadow" style="border: 4px solid #0284C7; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 12px 18px;">
               <div>
                 <span class="comic-badge-star" style="background: #0284C7;">TÌNH HUỐNG 2</span>
-                <h3 style="font-family: var(--font-comic); font-size: 37px; color: var(--color-secondary); margin: 8px 0;">ĐƠN VỊ BẠN BỊ VU HỒI</h3>
-                <p style="font-size: 33px; color: #475569; font-weight: 600;">Khi cánh quân bạn gặp khó khăn bị đối phương bao vây hỏa lực ác liệt.</p>
+                <h3 style="font-family: var(--font-comic); font-size: 35px; color: var(--color-secondary); margin: 6px 0;">ĐƠN VỊ BẠN BỊ VU HỒI</h3>
+                <p style="font-size: 28px; color: #475569; font-weight: 600; line-height: 1.32;">Khi cánh quân bạn gặp khó khăn bị đối phương bao vây hỏa lực ác liệt.</p>
               </div>
 
-              <div style="background: rgba(2, 132, 199, 0.08); border: 2px dashed #0284C7; border-radius: 8px; padding: 14px;">
-                <h4 style="font-family: var(--font-comic); font-size: 29px; color: #0284C7; margin-bottom: 6px;">BIỆN PHÁP CHI VIỆN:</h4>
-                <p style="font-size: 32px; color: #1E293B; font-weight: 600;">Chủ động chuyển làn pháo bắn dội bão lửa che chắn sườn; Không quân chi viện giải vây.</p>
+              <div style="background: rgba(2, 132, 199, 0.08); border: 2px dashed #0284C7; border-radius: 8px; padding: 10px 14px; margin: 8px 0;">
+                <h4 style="font-family: var(--font-comic); font-size: 26px; color: #0284C7; margin-bottom: 4px;">BIỆN PHÁP CHI VIỆN:</h4>
+                <p style="font-size: 27px; color: #1E293B; font-weight: 600; line-height: 1.32;">Chủ động chuyển làn pháo bắn dội bão lửa che chắn sườn; Không quân chi viện giải vây.</p>
               </div>
 
               <ul class="comic-bullets">
