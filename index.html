@@ -338,6 +338,76 @@
       border-radius: 999px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
       z-index: 999;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+    }
+    #hud-controls.hidden,
+    #hud-controls.hidden-hud {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translate(-50%, 40px) !important;
+      pointer-events: none !important;
+    }
+
+    /* Restore Pill Button when HUD is hidden */
+    #hud-toggle-pill {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #00224F;
+      color: #FF7A00;
+      border: 2px solid var(--color-primary);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+    #hud-toggle-pill:hover {
+      background: #FF7A00;
+      color: #FFFFFF;
+      transform: translateX(-50%) translateY(-2px);
+    }
+    #hud-controls.hidden-hud ~ #hud-toggle-pill,
+    #hud-controls.hidden ~ #hud-toggle-pill {
+      opacity: 0.9;
+      pointer-events: auto;
+    }
+
+    /* Toast Notification */
+    #toast-notification {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      background: #00224F;
+      border: 2px solid var(--color-primary);
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      transform: translateY(-15px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    #toast-notification.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
     }
     .hud-btn {
       background: rgba(255, 255, 255, 0.12);
@@ -1854,6 +1924,10 @@
       <i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
     </button>
 
+    <button class="hud-btn" id="btn-focus-mode" title="Ẩn/Hiện thanh điều khiển (Phím H)" onclick="toggleHUD()">
+      <i data-lucide="eye" id="icon-hud-toggle" style="width: 16px; height: 16px;"></i>
+    </button>
+
     <button class="hud-btn text-btn" id="btn-export-pdf" title="Xuất PDF 2K" onclick="exportToPDF2K()">
       <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
       <span>PDF 2K</span>
@@ -1865,14 +1939,55 @@
     </button>
   </div>
 
+  <!-- Restore Pill when HUD hidden -->
+  <div id="hud-toggle-pill" onclick="toggleHUD()" title="Hiện thanh điều khiển (Phím H)">
+    <i data-lucide="eye" style="width: 15px; height: 15px;"></i>
+    <span>Hiện điều khiển (H)</span>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notification">
+    <i data-lucide="info" style="color: var(--color-primary); width: 18px; height: 18px;"></i>
+    <span id="toast-msg">Thông báo</span>
+  </div>
+
   <script>
     const PresentationState = {
       currentSlide: 1,
       totalSlides: 20,
       timerSeconds: 0,
       isTimerRunning: false,
-      timerInterval: null
+      timerInterval: null,
+      isHudVisible: true
     };
+
+    let toastTimeout = null;
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const msg = document.getElementById('toast-msg');
+      if (!toast || !msg) return;
+      msg.textContent = message;
+      toast.classList.add('show');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function toggleHUD() {
+      const hud = document.getElementById('hud-controls');
+      if (!hud) return;
+      PresentationState.isHudVisible = !PresentationState.isHudVisible;
+      const icon = document.getElementById('icon-hud-toggle');
+      if (PresentationState.isHudVisible) {
+        hud.classList.remove('hidden', 'hidden-hud');
+        if (icon) icon.setAttribute('data-lucide', 'eye');
+        showToast("Đã hiện thanh điều khiển.");
+      } else {
+        hud.classList.add('hidden', 'hidden-hud');
+        if (icon) icon.setAttribute('data-lucide', 'eye-off');
+        showToast("Chế độ Tập trung: Nhấn 'H' để hiện lại thanh điều khiển.");
+      }
+      if (window.lucide) window.lucide.createIcons();
+    }
 
     function updateStageScale() {
       const stage = document.getElementById('slide-stage');
@@ -2015,6 +2130,7 @@
     }
 
     window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
       switch (e.key) {
         case 'ArrowRight':
         case ' ':
@@ -2039,6 +2155,11 @@
         case 'F':
           e.preventDefault();
           toggleFullscreen();
+          break;
+        case 'h':
+        case 'H':
+          e.preventDefault();
+          toggleHUD();
           break;
       }
     });
