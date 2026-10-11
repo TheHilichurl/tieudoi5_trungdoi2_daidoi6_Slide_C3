@@ -272,9 +272,13 @@
       border-radius: 8px;
       overflow: hidden;
       height: 100%;
+      min-height: 0;
+      max-height: 100%;
       background: #00224F;
     }
     .comic-photo-img {
+      position: absolute;
+      inset: 0;
       width: 100%; height: 100%; object-fit: cover;
       display: block;
       filter: contrast(1.1) brightness(0.98);
@@ -286,25 +290,105 @@
       color: #FFFFFF;
     }
 
+    .comic-body > div[style*="display: grid"] {
+      min-height: 0;
+    }
+
     .comic-bullets {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 8px;
     }
     .comic-bullets li {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      font-size: 25px;
-      line-height: 1.36;
+      font-size: 29.5px;
+      line-height: 1.35;
       color: #1E293B;
       font-weight: 600;
     }
+    .comic-bullets li svg,
     .comic-bullets li i {
       color: var(--color-primary);
       flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      margin-top: 5px;
+    }
+
+    /* Tinh chỉnh riêng biệt từng slide để chữ to đậm rõ nét tối đa mà không tràn viền */
+    #slide-3 .speech-bubble {
+      font-size: 36px;
+      line-height: 1.38;
+      padding: 16px 22px;
+    }
+    #slide-3 .comic-card {
+      margin-top: 10px;
+      padding: 12px 18px;
+    }
+    #slide-3 .comic-bullets li {
+      font-size: 30px;
+      line-height: 1.38;
+    }
+    #slide-3 div[style*="dashed"] {
+      margin-top: 10px;
+      padding: 10px 16px;
+    }
+    #slide-3 div[style*="dashed"] span {
+      font-size: 28px;
+    }
+
+    #slide-5 .comic-body > div {
+      gap: 14px;
+    }
+    #slide-5 .comic-card {
+      padding: 12px 18px;
+    }
+    #slide-5 .comic-bullets li {
+      font-size: 29.5px;
+      line-height: 1.34;
+    }
+
+    #slide-6 .comic-card {
+      padding: 14px 20px;
+    }
+    #slide-6 .comic-card h4 {
+      font-size: 32px;
+    }
+    #slide-6 .comic-bullets li {
+      font-size: 30px;
+      line-height: 1.36;
+    }
+
+    #slide-10 .comic-body > div {
+      gap: 12px;
+    }
+    #slide-10 .comic-card {
+      padding: 10px 16px;
+    }
+    #slide-10 .comic-card h3 {
+      font-size: 30px;
+      margin: 4px 0;
+    }
+    #slide-10 .comic-badge-star {
+      font-size: 14px;
+      padding: 2px 10px;
+    }
+    #slide-10 .comic-bullets {
+      gap: 6px;
+      margin-top: 6px;
+    }
+    #slide-10 .comic-bullets li {
+      font-size: 28px;
+      line-height: 1.32;
+    }
+    #slide-10 .comic-bullets li svg,
+    #slide-10 .comic-bullets li i {
+      width: 24px;
+      height: 24px;
       margin-top: 4px;
     }
 
@@ -638,12 +722,12 @@
 
           <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; flex: 1;">
             <div style="display: flex; flex-direction: column; justify-content: space-between;">
-              <div class="speech-bubble" style="border-left: 10px solid var(--color-primary); font-size: 42px;">
+              <div class="speech-bubble" style="border-left: 10px solid var(--color-primary); font-size: 35px; line-height: 1.38; padding: 14px 20px;">
                 "Các Vua Hùng đã có công dựng nước, <strong>Bác cháu ta phải cùng nhau giữ lấy nước!</strong> — Lấy nhỏ thắng lớn, <strong>lấy ít địch nhiều</strong> là bản sắc quân sự độc đáo của dân tộc ta."
               </div>
 
-              <div class="comic-card" style="margin-top: 14px;">
-                <h4 style="font-family: var(--font-comic); font-size: 32px; color: var(--color-secondary); margin-bottom: 8px;">
+              <div class="comic-card" style="margin-top: 10px; padding: 12px 18px;">
+                <h4 style="font-family: var(--font-comic); font-size: 32px; color: var(--color-secondary); margin-bottom: 6px;">
                   3 NGUYÊN LÝ BẤT BIẾN TRONG NGHỆ THUẬT ĐÁNH GIẶC:
                 </h4>
                 <ul class="comic-bullets">
@@ -653,9 +737,9 @@
                 </ul>
               </div>
 
-              <div style="background: rgba(0, 56, 130, 0.08); border: 2.5px dashed var(--color-secondary); padding: 12px 18px; border-radius: 8px; margin-top: 14px; display: flex; align-items: center; gap: 12px;">
+              <div style="background: rgba(0, 56, 130, 0.08); border: 2.5px dashed var(--color-secondary); padding: 10px 16px; border-radius: 8px; margin-top: 10px; display: flex; align-items: center; gap: 12px;">
                 <i data-lucide="zap" style="color: var(--color-primary); width: 28px; height: 28px; flex-shrink: 0;"></i>
-                <span style="font-size: 33px; font-weight: 700; color: var(--color-secondary);">Sự lãnh đạo của Đảng kế thừa và nâng nghệ thuật quân sự Việt Nam lên đỉnh cao thời đại!</span>
+                <span style="font-size: 27px; font-weight: 700; color: var(--color-secondary);">Sự lãnh đạo của Đảng kế thừa và nâng nghệ thuật quân sự Việt Nam lên đỉnh cao thời đại!</span>
               </div>
             </div>
 
@@ -854,7 +938,7 @@
           <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; flex: 1;">
             <div class="comic-photo-panel">
               <div class="sound-effect-burst" style="top: 20px; left: 20px;">ĐẦU NÃO!</div>
-              <img src="assets/vn-hanoi-aerial.jpg" alt="Thủ Đô Hà Nội - Trung Tâm Đầu Não" class="comic-photo-img">
+              <img src="assets/vn-tru-so-bo-quoc-phong.jpg" alt="Trụ Sở Bộ Quốc Phòng & Cơ Quan Đầu Não" class="comic-photo-img">
               <div class="comic-photo-overlay">
                 <span class="comic-badge-star">CHỈ HUY TỐI CAO</span>
                 <h3 style="font-family: var(--font-comic); font-size: 37px; color: #FFF;">SỰ LÃNH ĐẠO TUYỆT ĐỐI CỦA ĐẢNG</h3>
